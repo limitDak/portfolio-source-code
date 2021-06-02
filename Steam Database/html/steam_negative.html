@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+    crossorigin="anonymous">
+
+    <title>Steam Database</title>
+</head>
+
+<body onload="displayNegativeData()">
+    <div class = "container-fluid">
+
+        <style>
+            .menu-link > a { color: #fff; font-weight: 500; padding-left: 20px; }
+            .menu-bar { background-color: maroon; }
+        </style>
+
+        <header>
+            <h4 style = "text-align: center;" >Level Two Query</h4>
+            <p style = "text-align: center;">Negatively Rated Games</p>
+        </header>
+       
+
+        <div class = "row" style = "padding-bottom: 1rem;">
+            <nav class = "navbar navbar-expand-lg navbar-dark" style="background-color: #6c757d;">
+                <div class = "collapse navbar-collapse justify-content-center" id="navbarText">
+                    <ul class = "navbar-nav mr-auto">
+                        <li class = "nav-item active">
+                            <a class = "nav-link" href="steam_games.html">List of Games</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_game_specifics.html">Extra Game Info</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_customers.html">Customer Ratings</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_categories.html">Categories</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_genres.html">Genres</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_playtime.html">Playtime Data</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_companies.html">Game Companies</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_activision.html">Games Published By Activision</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_negative.html">Negatively Rated Games</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_stored_category.html">Category Search</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="steam_stored_genre.html">Genre Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class = "col-12" style = "display: block; position: relative; height: 80vh; overflow: auto;">
+                <table class = "table table-bordered table-hover">
+                    <thead class="table-dark" style="font-weight: bold">
+                        <tr>
+                            <td style="position: sticky; top: 0; z-index: 1;">Game Name</td>
+                            <td style="position: sticky; top: 0; z-index: 1;">Price</td>
+                            <td style="position: sticky; top: 0; z-index: 1;">Negative Ratings</td>
+                            <td style="position: sticky; top: 0; z-index: 1;">Positive Ratings</td> 
+                            <td style="position: sticky; top: 0; z-index: 1;">Difference</td>
+                        </tr>
+                    </thead>
+                    <tbody id="negative-list"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src = "../steam_database.js"></script>
+</body>
+</html>
