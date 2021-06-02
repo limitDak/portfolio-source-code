@@ -176,7 +176,7 @@ switch ($type) {
 
         $parameterValues = array(":value" => $value);
 
-        // This SQL statement does not use any parameters. Use the default $parameterValues array.
+        // This SQL statement does use parameters. Use the new $parameterValues array.
         $response = getAllRecords($sql, $db, $parameterValues);
 
         break;
